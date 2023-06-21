@@ -1,0 +1,371 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary: #ad8e70;
+  --bg: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  align-items: center;
+  min-height: 92vh;
+  background: url(../img/header-bg.jpg) no-repeat;
+  background-size: cover;
+  padding: 0px 180px;
+}
+
+section {
+  max-width: 100%;
+  width: 38%;
+}
+
+.container1 {
+  color: rgb(255, 255, 255);
+}
+
+.container1 h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  line-height: 3.4rem;
+}
+
+.container1 p {
+  line-height: 1.5rem;
+}
+
+.radioBtn {
+  display: flex;
+  gap: 5px;
+  margin-top: 2rem;
+  margin-left: 0.5rem;
+  color: hsla(278, 6%, 39%, 0.979);
+}
+
+.radioBtn input {
+  width: 15px;
+  height: 15px;
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+.radioBtn input:focus {
+  outline: none;
+}
+
+/* Region */
+.region {
+  margin-top: 10px;
+  color: hsla(278, 6%, 39%, 0.979);
+}
+
+.region select:focus {
+  outline: 1px solid #ad8e70;
+}
+
+.region option {
+  font-family: Poppins;
+  padding: 10px 15px;
+  color: hsla(278, 6%, 39%, 0.979);
+  font-weight: 600;
+}
+
+.region select {
+  display: inline-block;
+  width: 100%;
+  height: 35px;
+  padding: 0px 15px;
+  cursor: pointer;
+  color: hsla(278, 6%, 39%, 0.979);
+  border-radius: 0;
+  background: #fff;
+}
+
+#region {
+  width: 100%;
+  height: 3.5rem;
+  margin-top: 1.3rem;
+  padding-left: 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border: 1px solid hsla(283, 3%, 43%, 0.281);
+  border-radius: 0.3rem;
+}
+
+/* Region End */
+
+input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  margin: 0 5px 0 0;
+  cursor: pointer;
+}
+
+.agreement {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox {
+  display: flex;
+}
+
+form {
+  background-color: white;
+  padding: 1.7rem 3rem 3rem 3rem;
+  border-radius: 0.65rem;
+  font-weight: 600;
+  box-shadow: 0px 8px 0px rgba(0, 0, 8, 0.192);
+}
+
+input {
+  width: 100%;
+  height: 3.5rem;
+  margin-top: 1.3rem;
+  padding-left: 2rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border: 1px solid hsla(283, 3%, 43%, 0.281);
+  border-radius: 0.3rem;
+}
+
+input:focus {
+  outline: 1px solid #ad8e70;
+  caret-color: #ad8e70;
+}
+
+button:focus {
+  outline: none;
+}
+
+input.invalid {
+  border-color: var(--clr-red) !important;
+  border-width: 2px !important;
+}
+
+.error {
+  border: 0.125rem solid red;
+  background: url(../img/icon-error.svg) no-repeat;
+  background-position: 95% 50%;
+}
+
+.error-text {
+  font-size: 0.75rem;
+  font-style: italic;
+  color: hsl(0, 100%, 74%);
+}
+
+.success {
+  border: 2px solid hsl(154, 59%, 51%);
+}
+
+#checkbox-error {
+  border: none;
+  background: none;
+}
+
+.btn {
+  width: 100%;
+  background-color: hsl(154, 59%, 51%);
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  border: none;
+  height: 3.8rem;
+  border-radius: 0.3rem;
+  margin-top: 1.3rem;
+  margin-bottom: 1rem;
+  box-shadow: inset 0px -3px 0px rgba(0, 88, 50, 0.329);
+}
+
+.btn:hover {
+  background-color: hsl(152, 100%, 70%);
+  cursor: pointer;
+}
+
+.popup-overlay {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.popup-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 29rem;
+  max-height: 40rem;
+  background-color: rgb(255, 255, 255);
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  overflow: auto;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.popup.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.close {
+  position: absolute;
+  top: 0.375rem;
+  right: 0.625rem;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.popup .content {
+  padding: 0.5rem 1.5rem;
+  text-align: left;
+  color: #333;
+}
+
+.popup .content p {
+  font-size: 1rem;
+}
+
+.popup .content li {
+  font-weight: 600;
+}
+
+.agree-btn {
+  text-align: right;
+}
+
+.agree-btn button{
+  background: hsl(154, 59%, 51%);
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  padding: 0.8rem 1.4rem;
+  cursor: pointer;
+}
+
+form p {
+  color: hsla(246, 25%, 77%, 0.808);
+  font-size: 0.7rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+#terms-condition {
+  color: #ad8e70;
+  background: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
+@media (max-width: 1600px) {
+  section {
+    width: 45%;
+  }
+}
+
+@media (max-width: 1366px) {
+  section {
+    width: 50%;
+  }
+
+  .radioBtn input {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 1260px) {
+  main {
+    padding: 0 70px;
+  }
+  section {
+    width: 90%;
+  }
+  input {
+    padding-left: 1.6rem;
+  }
+}
+
+@media (max-width: 960px) {
+  main {
+    flex-direction: column;
+    padding: 0 40px;
+    gap: 2rem;
+  }
+  section {
+    width: 75%;
+  }
+  .container1 {
+    text-align: center;
+    margin-right: 0;
+  }
+  .container1 h1 {
+    line-height: 2.3rem;
+    margin-bottom: 0.5rem;
+  }
+  .container1 p {
+    line-height: 1.2rem;
+  }
+}
+
+@media (max-width: 760px) {
+  section {
+    width: 90%;
+  }
+}
+
+@media (max-width: 486px) {
+  main {
+    padding: 10px 10px;
+  }
+  .btn {
+    height: 3.2rem;
+  }
+  input {
+    margin-top: 0.5rem;
+    height: 3.2rem;
+  }
+}

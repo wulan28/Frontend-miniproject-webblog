@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LVinnamon</title>
+    <!-- Icon Logo -->
+    <link rel="icon" href="img/logo-img.png" />
+    <!-- Icon Logo -->
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&family=Rubik:wght@300&display=swap" rel="stylesheet" />
+    <!-- Fonts -->
+
+    <!-- My Style -->
+    <link rel="stylesheet" href="home/home.css" />
+    <link rel="stylesheet" href="bar.css" />
+    <!-- My Style -->
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo"><span>LV</span>innamon</a>
+
+      <div class="navbar-nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li>
+            <a href="#">Products &dtrif;</a>
+            <ul class="dropdown">
+              <li><a href="products/cinnamon-rolls.html">Original</a></li>
+              <li><a href="products/chocolate.html">Chocolate</a></li>
+              <li><a href="products/matcha.html">Matcha</a></li>
+              <li><a href="products/cream-cheese.html">Cream Cheese</a></li>
+              <li><a href="products/beverages.html">Beverages</a></li>
+            </ul>
+          </li>
+          <li><a href="about/about.html">About Us</a></li>
+          <li><a href="location/location.html">Location</a></li>
+        </ul>
+      </div>
+
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <div class="popup-overlay">
+      <div class="popup blur">
+        <div class="content">
+          <div class="popup-header">
+            <img src="img/logo-img.png" alt="" class="popup-logo">
+            <h1>WELCOME!</h1>
+            <p>Operational Day: Monday - Saturday</p>
+          </div>
+          <div>
+            <h2>HAPPY HOUR</h2>
+          </div>
+          <div>
+            <h3>WEDNESDAY &amp; FRIDAY</h3>
+            <h4>FROM 2 - 5 PM</h4>
+          </div>
+          <a href="register/register.html" target="_blank" class="cta">Register Now</a>
+          <button class="close">&#10005;</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slider Image -->
+    <div class="slider">
+      <div class="container">
+          <img src="/img/bannerhome_1.jpg" alt="" class="slide-img">
+          <img src="/img/bannerhome_2.jpg" alt="" class="slide-img">
+          <img src="/img/bannerhome_3.jpg" alt="" class="slide-img">
+      </div>
+    </div>
+    <!-- Slider Image End-->
+
+    <div class="product-categories">
+      <h1>Product Categories</h1>
+      <div class="product-categories-container">
+        <div class="card oddCard">
+          <div class="card-image">
+            <img src="/img/original-wide.jpg" alt="original" class="card-img" />
+            <div class="hover-image cinnamon">
+              Cinnamon Rolls
+            </div>
+          </div>
+          <div class="card-info">
+          </div>
+        </div>
+        <div class="card evenCard">
+          <div class="card-image">
+            <img src="/img/beverages.jpg" alt="chocolate" class="card-img" />
+            <div class="hover-image beverages">
+              Beverages
+            </div>
+          </div>
+          <div class="card-info">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="section-p1">
+      <div class="col" id="contact">
+        <!-- Logo -->
+        <img class="logo" src="img/logo-img.png" alt="" width="100px" />
+        <!-- Logo -->
+        <h4>Contact</h4>
+        <p>
+          <strong>Address :</strong> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum, aliquam.
+        </p>
+        <p><strong>Phone :</strong> +62 5369 5697 70</p>
+        <p><strong>Hours :</strong> 09:00 AM - 05:00 PM</p>
+      </div>
+
+      <div class="col">
+        <h4>Menu Page</h4>
+        <a href="home/index.html">Home</a>
+        <a href="products/cinnamon-rolls.html">Products</a>
+        <a href="about/about.html">About Us</a>
+        <a href="location/location.html">Location</a>
+      </div>
+
+      <div class="col">
+        <h4>Our Products</h4>
+        <a href="products/cinnamon-rolls.html">Original</a>
+        <a href="products/chocolate.html">Chocolate</a>
+        <a href="products/matcha.html">Matcha</a>
+        <a href="products/cream-cheese.html">Cream Cheese</a>
+        <a href="products/beverages.html">Beverages</a>
+      </div>
+
+      <div class="follow">
+        <h4>Follow Us</h4>
+        <div class="icon">
+          <a href="https://www.instagram.com/"><img src="img/instagram.svg" alt="Instagram" /></a>
+          <a href="https://www.facebook.com/"><img src="img/facebook.svg" alt="Facebook" /></a>
+          <a href="https://www.twitter.com/"><img src="../img/twitter.svg" alt="Twitter"></a>
+          <a href="https://www.youtube.com/"><img src="img/youtube.svg" alt="Youtube" /></a>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>Copyright &copy; 2023</p>
+      </div>
+    </footer>
+    <!-- Footer -->
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="/home/home.js"></script>
+    <script src="home/slider.js"></script>
+  </body>
+</html>
